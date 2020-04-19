@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kg.megacom.controller.MainEmployeeViewFormController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Файл">
+            <items>
+              <MenuItem fx:id="mnClose" mnemonicParsing="false" onAction="#onMenuItemClicked" text="Закрыть" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Редактировать ">
+            <items>
+              <MenuItem fx:id="mnAddEmployee" mnemonicParsing="false" onAction="#onMenuItemClicked" text="Добавить сотрудника" />
+                  <MenuItem fx:id="mnAddPosition" mnemonicParsing="false" onAction="#onMenuItemClicked" text="Добавить позицию" />
+                  <MenuItem fx:id="mnEdit" mnemonicParsing="false" onAction="#onMenuItemClicked" text="Редактировать" />
+                  <MenuItem fx:id="mnDelete" mnemonicParsing="false" onAction="#onMenuItemClicked" text="Удалить" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Справка">
+            <items>
+              <MenuItem fx:id="mnAbout" mnemonicParsing="false" onAction="#onMenuItemClicked" text="О программе " />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TableView fx:id="tblViewEmployee" onMouseClicked="#onMouseClicked" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="colmNum" prefWidth="65.0" text="№" />
+          <TableColumn fx:id="colmName" prefWidth="276.0" text="ФИО" />
+            <TableColumn fx:id="colmPosition" prefWidth="87.0" text="Позиция" />
+            <TableColumn fx:id="colmActive" prefWidth="87.0" text="Active" visible="false" />
+            <TableColumn fx:id="colmId" prefWidth="87.0" text="id" visible="false" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>
